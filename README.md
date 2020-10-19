@@ -48,9 +48,9 @@ Post 3: https://www.cyberciti.biz/faq/change-default-shell-to-bash-on-macos-cata
     * cat /etc/shells - this command lists the shells that are on the system (make sure you put the s in shells, for some reason I’ve not a few times already and I get: cat: /etc/shell: No such file or directory (as I should)
     * bash appeared on the list
 ➜  / cat /etc/shells
-# List of acceptable shells for chpass(1).
-# Ftpd will not allow users to connect who are not using
-# one of these shells.
+\# List of acceptable shells for chpass(1).
+\# Ftpd will not allow users to connect who are not using
+\# one of these shells.
 
 /bin/bash
 /bin/csh
@@ -92,36 +92,36 @@ Post 4 is the man doc for chsh: https://linux.die.net/man/1/chsh
         * And I look at that for a few seconds and I’m like what is that?
 * First let me tell you the net result of running sudo -i
 * It changed my user to root.  I went from being me to being root.
-➜  ~ whoami
-<my_user>
-➜  ~ sudo -i
-Password:
-XXXXXXXX:~ root# whoami
-root
-XXXXXXXX:~ root#
+➜  ~ whoami <br>
+<my_user> <br>
+➜  ~ sudo -i <br>
+Password: <br>
+XXXXXXXX:~ root# whoami <br>
+root <br>
+XXXXXXXX:~ root# <br><br>
 
-############################
+############################ <br><br>
 
-➜  ~ whoami
-<my_user>
-➜  ~ sudo -i
-Password:
-XXXXXXXXX:~ root# echo /usr/local/bin/bash >> /etc/shells
-XXXXXXXXX:~ root# chsh -s usr/local/bin/bash
-Changing shell for root.
-chsh: WARNING: shell 'usr/local/bin/bash' does not exist
-XXXXXXXXX:~ root# exit
-logout
-➜  ~ whoami
-<my_user>
-➜  ~ bash --version
-GNU bash, version 5.0.18(1)-release (x86_64-apple-darwin19.5.0)
-Copyright (C) 2019 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+➜  ~ whoami <br>
+<my_user> <br>
+➜  ~ sudo -i <br>
+Password: <br>
+XXXXXXXXX:~ root# echo /usr/local/bin/bash >> /etc/shells <br>
+XXXXXXXXX:~ root# chsh -s usr/local/bin/bash <br>
+Changing shell for root. <br>
+chsh: WARNING: shell 'usr/local/bin/bash' does not exist <br>
+XXXXXXXXX:~ root# exit <br>
+logout <br>
+➜  ~ whoami <br>
+<my_user> <br>
+➜  ~ bash --version <br>
+GNU bash, version 5.0.18(1)-release (x86_64-apple-darwin19.5.0) <br>
+Copyright (C) 2019 Free Software Foundation, Inc. <br>
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html> <br><br>
 
-This is free software; you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.
-➜  ~
+This is free software; you are free to change and redistribute it. <br>
+There is NO WARRANTY, to the extent permitted by law. <br>
+➜  ~ <br><br>
 
 I have to say that the   sudo -i
 Was a cool discovery from me.  
@@ -141,8 +141,8 @@ The -i (simulate initial login) option runs the shell specified by the password 
     * /usr/local/bin/bash --version
     * As a check also, as Post 3 recommended it. 
     * All was well.  
-    * I was back to bash and an more advance version of it. 
-**FINALLY A CLEAN INSTALL OF ZSH**
+    * I was back to bash and an more advance version of it. <br>
+**FINALLY A CLEAN INSTALL OF ZSH** <br>
 * In Post 1 I had read of Oh My Zsh. 
 * I read that it puts down zsh, a framework with plugins and themes. 
 * I wanted to make use of all those tools. 
@@ -158,9 +158,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
     * chsh -s $(which zsh)
     * I think there is a benefit to knowing and thus you can be precise and if you don’t want to install Oh My Zsh framework you can just cat the /etc/shells files and see exactly where it is. 
     * / cat /etc/shells
-    * # List of acceptable shells for chpass(1).
-    * # Ftpd will not allow users to connect who are not using
-    * # one of these shells.
+    * \# List of acceptable shells for chpass(1).
+    * \# Ftpd will not allow users to connect who are not using
+    * \# one of these shells.
     * 
     * /bin/bash
     * /bin/csh
